@@ -1,0 +1,108 @@
+:root{
+  --green:#0f6b45; --green-2:#178456; --green-3:#eaf7f0;
+  --ink:#123126; --muted:#6a7d75; --line:#dcebe3; --white:#fff;
+  --shadow:0 16px 50px rgba(15,107,69,.10);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#f6fbf8}
+body{overflow-x:hidden}
+.app{min-height:100vh;background:
+ radial-gradient(circle at 88% 0%,rgba(23,132,86,.10),transparent 30%),
+ linear-gradient(180deg,#fff 0%,#f5fbf8 100%)}
+.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,64px);border-bottom:1px solid rgba(220,235,227,.9);background:rgba(255,255,255,.84);backdrop-filter:blur(16px);position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:42px;height:42px;border-radius:13px;background:var(--green);color:#fff;display:grid;place-items:center;font-family:Amiri,serif;font-size:25px;box-shadow:0 8px 20px rgba(15,107,69,.2)}
+.brand-name{font-size:12px;font-weight:800;letter-spacing:.11em}.brand-place{font-size:11px;color:var(--muted);margin-top:4px}
+.top-status{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}.dot{width:8px;height:8px;border-radius:50%;background:#f0b429;box-shadow:0 0 0 4px rgba(240,180,41,.12)}
+main{width:min(1240px,92vw);margin:auto;padding:34px 0 28px}
+.hero{display:grid;grid-template-columns:1fr 370px;gap:22px;align-items:stretch;margin-bottom:22px}
+.hero-copy{border-radius:28px;padding:clamp(28px,5vw,56px);background:linear-gradient(135deg,var(--green),#0a5236);color:white;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero-copy:after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(255,255,255,.14);border-radius:50%;right:-90px;top:-100px;box-shadow:0 0 0 50px rgba(255,255,255,.03),0 0 0 100px rgba(255,255,255,.02)}
+.eyebrow{font-size:11px;letter-spacing:.14em;opacity:.78;margin:0 0 17px;font-weight:700}.clock{font-size:clamp(48px,8vw,86px);line-height:.95;font-weight:800;letter-spacing:-.055em}.date-line{font-size:14px;margin-top:18px;font-weight:600}.hijri-line{font-size:12px;margin-top:6px;opacity:.72}
+.next-card{border-radius:28px;padding:32px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:center}
+.mini-label,.section-kicker{font-size:10px;letter-spacing:.14em;font-weight:800;color:var(--green-2)}.next-card strong{font-size:28px;margin-top:8px}.countdown{font-variant-numeric:tabular-nums;font-size:40px;font-weight:800;letter-spacing:-.03em;margin:8px 0}.next-time{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:22px}.panel{background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}.prayer-panel{padding:28px}
+.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.panel-head h2,.panel-head h3{margin:6px 0 0}.panel-head h2{font-size:24px}.panel-head h3{font-size:18px}.compact{margin-bottom:13px}.icon-btn{border:1px solid var(--line);background:#fff;width:40px;height:40px;border-radius:12px;color:var(--green);font-size:22px;cursor:pointer}.prayer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.prayer{border:1px solid var(--line);border-radius:17px;padding:17px 12px;text-align:center;background:#fbfefc;transition:.2s}.prayer.active{background:var(--green-3);border-color:#b9e3cd;transform:translateY(-2px)}.prayer .pname{font-size:11px;color:var(--muted);font-weight:700}.prayer .ptime{font-size:22px;font-weight:800;margin-top:7px;font-variant-numeric:tabular-nums}.prayer.active .ptime{color:var(--green)}.accuracy-note{font-size:10px;color:var(--muted);margin-top:17px}.accuracy-note span{color:#20a66b;margin-right:5px}.side{display:flex;flex-direction:column;gap:22px}.location-panel,.quote-panel{padding:24px}.location-panel p,.quote-panel p{font-size:12px;color:var(--muted);line-height:1.65}.pin{font-size:24px;color:var(--green)}.primary-btn{width:100%;border:0;border-radius:12px;padding:12px;background:var(--green);color:white;font-weight:700;cursor:pointer}.primary-btn:hover{background:#0b5a3b}.quote-panel{background:linear-gradient(145deg,#f0faf5,#fff)}.arabic{font-family:Amiri,serif;font-size:31px;text-align:center;margin:20px 0 8px;direction:rtl}.quote-panel p{margin:0;text-align:center}.quote-panel small{display:block;text-align:center;color:var(--green-2);margin-top:8px}.info-strip{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.info-item{display:flex;gap:12px;padding:18px;border-radius:18px;background:#fff;border:1px solid var(--line)}.info-icon{font-size:21px}.info-item b{display:block;font-size:12px;margin-bottom:5px}.info-item span:last-child{font-size:11px;color:var(--muted);line-height:1.5}footer{width:min(1240px,92vw);margin:auto;padding:15px 0 30px;color:#82928c;font-size:10px;display:flex;justify-content:space-between}.loading{grid-column:1/-1;padding:35px;text-align:center;color:var(--muted)}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#123126;color:#fff;padding:12px 16px;border-radius:12px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;z-index:20}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (max-width: 900px){
+  main{width:min(94vw,1240px)}
+  .hero{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .prayer-grid{grid-template-columns:repeat(5,minmax(90px,1fr));overflow-x:auto}
+  .info-strip{grid-template-columns:1fr}
+}
+
+@media (max-width: 640px){
+  html,body{width:100%;min-width:0}
+  .app{width:100%;overflow-x:hidden}
+  .topbar{height:auto;min-height:64px;padding:11px 4vw;gap:10px}
+  .brand{min-width:0;max-width:100%}
+  .brand-mark{width:38px;height:38px;min-width:38px;border-radius:11px}
+  .brand > div:last-child{min-width:0}
+  .brand-name{font-size:9px;letter-spacing:.07em;white-space:normal;line-height:1.35}
+  .brand-place{font-size:9px}
+  .top-status{display:none}
+
+  main{width:100%;max-width:none;padding:14px 12px 20px;margin:0}
+  .hero{display:flex;flex-direction:column;gap:12px;margin-bottom:12px}
+  .hero-copy{padding:24px 20px;border-radius:20px;width:100%;min-width:0}
+  .eyebrow{font-size:8px;letter-spacing:.10em;line-height:1.5;margin-bottom:12px}
+  .clock{font-size:clamp(42px,14vw,62px);letter-spacing:-.06em;white-space:nowrap}
+  .date-line{font-size:12px;line-height:1.45;margin-top:12px}
+  .hijri-line{font-size:10px;line-height:1.45}
+
+  .next-card{width:100%;min-width:0;min-height:0;padding:21px;border-radius:20px}
+  .next-card strong{font-size:23px}
+  .countdown{font-size:clamp(29px,9vw,38px);white-space:nowrap}
+
+  .grid{display:flex;flex-direction:column;gap:12px}
+  .prayer-panel{width:100%;min-width:0;padding:18px;border-radius:20px;overflow:hidden}
+  .panel-head{margin-bottom:15px}
+  .panel-head h2{font-size:20px}
+  .icon-btn{width:36px;height:36px}
+
+  /* Jadwal tidak lagi memaksa card melebar. Semua card mengecil secara proporsional. */
+  .prayer-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:6px;
+    overflow:visible;
+  }
+  .prayer{
+    min-width:0;
+    width:100%;
+    padding:12px 4px;
+    border-radius:13px;
+  }
+  .prayer .pname{font-size:8px;white-space:nowrap}
+  .prayer .ptime{font-size:clamp(14px,4.5vw,19px);letter-spacing:-.04em;white-space:nowrap}
+  .accuracy-note{font-size:9px;line-height:1.5;margin-top:12px}
+
+  .side{display:flex;flex-direction:column;gap:12px}
+  .location-panel,.quote-panel{width:100%;min-width:0;padding:18px;border-radius:18px}
+  .location-panel p,.quote-panel p{font-size:11px;line-height:1.55}
+  .location-panel h3{font-size:16px;overflow-wrap:anywhere}
+  .location-panel .primary-btn{font-size:11px}
+  .arabic{font-size:27px}
+
+  .info-strip{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+  .info-item{width:100%;min-width:0;padding:14px;border-radius:15px}
+  .info-item div{min-width:0}
+  .info-item span:last-child{font-size:10px;overflow-wrap:anywhere}
+  footer{width:100%;padding:12px 14px 22px;display:flex;flex-direction:column;gap:5px;font-size:8px}
+}
+
+@media (max-width: 380px){
+  main{padding-left:9px;padding-right:9px}
+  .hero-copy{padding:20px 16px}
+  .prayer-panel{padding:14px}
+  .prayer-grid{gap:4px}
+  .prayer{padding:10px 2px}
+  .prayer .pname{font-size:7px}
+  .prayer .ptime{font-size:13px}
+  .accuracy-note{font-size:8px}
+}.top-status{display:none}.brand-name{font-size:10px}.brand-place{font-size:10px}main{padding-top:18px}.hero-copy{padding:28px 22px;border-radius:22px}.next-card,.panel{border-radius:20px}.prayer-panel{padding:20px}.side{grid-template-columns:1fr}.clock{font-size:55px}.countdown{font-size:34px}.info-strip{margin-top:16px}footer{font-size:9px}}
+@media(min-width:1500px){.app{font-size:1.05em}}
+
+/* Fluid layout safeguard */
+img,svg,video,canvas{max-width:100%;height:auto} button{max-width:100%}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0f6b45">
+  <title>Masjid Annur Shobar Rahman — Digital Signage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">م</div>
+        <div>
+          <div class="brand-name">MASJID ANNUR SHOBAR RAHMAN</div>
+          <div class="brand-place">Jalan Raya Ciangsana</div>
+        </div>
+      </div>
+      <div class="top-status">
+        <span id="connectionDot" class="dot"></span>
+        <span id="locationLabel">Mendeteksi lokasi…</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">ASSALAMU'ALAIKUM WARAHMATULLAHI WABARAKATUH</p>
+          <div id="clock" class="clock">--:--:--</div>
+          <div id="dateLine" class="date-line">Memuat tanggal…</div>
+          <div id="hijriLine" class="hijri-line">Memuat kalender Hijriah…</div>
+        </div>
+        <div class="next-card">
+          <span class="mini-label">SALAT BERIKUTNYA</span>
+          <strong id="nextPrayer">Memuat…</strong>
+          <div id="countdown" class="countdown">--:--:--</div>
+          <span id="nextPrayerTime" class="next-time">--:--</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="panel prayer-panel">
+          <div class="panel-head">
+            <div>
+              <span class="section-kicker">JADWAL HARI INI</span>
+              <h2>Waktu Salat</h2>
+            </div>
+            <button id="refreshBtn" class="icon-btn" title="Perbarui jadwal">↻</button>
+          </div>
+          <div id="prayerGrid" class="prayer-grid">
+            <div class="loading">Mengambil jadwal salat…</div>
+          </div>
+          <div class="accuracy-note">
+            <span>●</span>
+            Jadwal dihitung berdasarkan koordinat perangkat &amp; metode Kemenag RI.
+          </div>
+        </div>
+
+        <aside class="side">
+          <div class="panel location-panel">
+            <div class="panel-head compact">
+              <div>
+                <span class="section-kicker">LOKASI</span>
+                <h3 id="locationTitle">Mencari lokasi…</h3>
+              </div>
+              <span class="pin">⌖</span>
+            </div>
+            <p id="locationDetail">Izinkan lokasi pada browser agar jadwal mengikuti perangkat.</p>
+            <button id="locationBtn" class="primary-btn">Gunakan lokasi saya</button>
+          </div>
+
+          <div class="panel quote-panel">
+            <span class="section-kicker">PENGINGAT HARI INI</span>
+            <div class="arabic">إِنَّ مَعَ الْعُسْرِ يُسْرًا</div>
+            <p>“Sesungguhnya bersama kesulitan ada kemudahan.”</p>
+            <small>QS. Al-Insyirah: 6</small>
+          </div>
+        </aside>
+      </section>
+
+      <section class="info-strip">
+        <div class="info-item"><span class="info-icon">📢</span><div><b>Pengumuman</b><span id="announcement">Selamat datang di Masjid Annur Shobar Rahman.</span></div></div>
+        <div class="info-item"><span class="info-icon">📖</span><div><b>Info Masjid</b><span>Jaga kebersihan, ketenangan, dan kenyamanan bersama.</span></div></div>
+        <div class="info-item"><span class="info-icon">💚</span><div><b>Infak & Sedekah</b><span>Partisipasi jamaah membantu memakmurkan masjid.</span></div></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Masjid Annur Shobar Rahman</span>
+      <span>Digital Signage • Prayer Times</span>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
